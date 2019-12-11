@@ -1,33 +1,40 @@
 # Read Me
 
-=====================
-Knock Authentication
-=====================
+## Knock Authentication
+
+---
+
 `gem 'knock'`
 `gem 'jwt'`
 
-============================
-Knock install
-============================
+## Knock install
+
+---
+
 `rails generate knock:install`
 `rails generate knock:token_controller user`
 
-============================
-User
-============================
+# create Users
+
+---
+
 `rails g scaffold user`
 
-============================
-Add to application_controller.rb
-============================
+## Add to application_controller.rb
+
+---
+
 `include Knock::Authenticable`
 
-============================
-Add to user_token_controller.rb
-============================
+## Add to user_token_controller.rb
+
+---
+
 `skip_before_action :verify_authenticity_token`
 
-To post new user
+## To post new user
+
+---
 
 ```javascript
 {
@@ -37,7 +44,9 @@ To post new user
 }
 ```
 
-To Login
+## To Login
+
+---
 
 ```javascript
 {
