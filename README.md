@@ -3,29 +3,29 @@
 =====================
 Knock Authentication
 =====================
-gem 'knock'
-gem 'jwt'
+`gem 'knock'`
+`gem 'jwt'`
 
 ============================
 Knock install
 ============================
-rails generate knock:install
-rails generate knock:token_controller user
+`rails generate knock:install`
+`rails generate knock:token_controller user`
 
 ============================
 User
 ============================
-rails g scaffold user
+`rails g scaffold user`
 
 ============================
-Add to Application controller
+Add to application_controller.rb
 ============================
-include Knock::Authenticable
+`include Knock::Authenticable`
 
 ============================
-Add to user_token_controller
+Add to user_token_controller.rb
 ============================
-skip_before_action :verify_authenticity_token
+`skip_before_action :verify_authenticity_token`
 
 To post new user
 
